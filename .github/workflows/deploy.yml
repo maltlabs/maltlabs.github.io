@@ -22,7 +22,7 @@ jobs:
 
     - name: Sync Website to S3
       run: |
-        aws s3 sync ./ s3://maltlabs-website --exclude ".git/*" --delete --acl public-read
+        aws s3 sync ./ s3://maltlabs-website --exclude ".git/*" --delete --no-acl
 
     - name: Invalidate CloudFront Cache
       run: |
