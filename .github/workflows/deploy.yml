@@ -22,8 +22,8 @@ jobs:
 
     - name: Sync Website to S3
       run: |
-        aws s3 sync ./ s3://maltlabs-website --exclude ".git/*" --delete --no-acl
+        aws s3 sync ./ s3://maltlabs-website --exclude ".git/*" --delete
 
     - name: Invalidate CloudFront Cache
       run: |
-        aws cloudfront create-invalidation --distribution-id YOUR_CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+        aws cloudfront create-invalidation --distribution-id E11GZ5D8AEERNE --paths "/*"
