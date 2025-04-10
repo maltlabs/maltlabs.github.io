@@ -1,0 +1,193 @@
+/* Estilos adicionais para o site MaltLabs */
+
+/* Animações para elementos */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos para o formulário de contato */
+.form-input {
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Estilos para o blog */
+.blog-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.blog-tag {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Melhorias de acessibilidade */
+:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Animações para botões */
+.btn-hover-effect {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.btn-hover-effect:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+}
+
+.btn-hover-effect:hover:after {
+  width: 300%;
+  height: 300%;
+}
+
+/* Estilos para mensagens de sucesso/erro */
+.success-message {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-left: 4px solid #10b981;
+}
+
+.error-message {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-left: 4px solid #ef4444;
+}
+
+/* Estilos para o blog estático */
+.blog-content {
+  line-height: 1.7;
+}
+
+.blog-content h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #f3f4f6;
+}
+
+.blog-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #f3f4f6;
+}
+
+.blog-content p {
+  margin-bottom: 1.25rem;
+  color: #d1d5db;
+}
+
+.blog-content ul {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+  color: #d1d5db;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem;
+}
+
+.blog-content a {
+  color: #3b82f6;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.blog-content a:hover {
+  color: #60a5fa;
+}
+
+.blog-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #374151;
+}
+
+.blog-meta {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.blog-meta .author {
+  font-weight: 500;
+  margin-right: 1rem;
+}
+
+.blog-meta .date {
+  margin-right: 1rem;
+}
+
+.blog-meta .tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blog-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #374151;
+}
+
+.blog-navigation a {
+  display: inline-flex;
+  align-items: center;
+  color: #3b82f6;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.blog-navigation a:hover {
+  color: #60a5fa;
+}
+
+.blog-navigation .prev-post svg {
+  margin-right: 0.5rem;
+}
+
+.blog-navigation .next-post svg {
+  margin-left: 0.5rem;
+}
+
+.blog-navigation .disabled {
+  color: #6b7280;
+  pointer-events: none;
+}
