@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
         message: message
       };
       
-      // API URL (will be replaced with the actual API Gateway URL)
-      const apiUrl = 'https://API_GATEWAY_URL_PLACEHOLDER';
+      // API URL
+      const apiUrl = 'https://maltoso-0a69f2f17fa4.herokuapp.com/webhook/contact-form';
       
       // Send data to API
       fetch(apiUrl, {
