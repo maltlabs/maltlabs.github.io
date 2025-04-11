@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
       };
       
       // API URL
-      const apiUrl = 'https://maltoso-0a69f2f17fa4.herokuapp.com/webhook/contact-form';
+      const apiUrl = 'https://n8n.maltlabs.top/webhook/contact-form';
       
       // Send data to API
       fetch(apiUrl, {
