@@ -1,21 +1,31 @@
 // Script to load blog posts from static JSON file
 document.addEventListener('DOMContentLoaded', function() {
   const blogContainer = document.getElementById('blog-posts-container');
-  
+
   if (blogContainer) {
     // Show loading state
     blogContainer.innerHTML = '<div class="text-center py-10"><div class="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500"></div><p class="mt-2 text-gray-400">Loading posts...</p></div>';
-    
+
     // Function to format date
     function formatDate(dateString) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' };
       return new Date(dateString).toLocaleDateString('en-US', options);
     }
-    
+
     // Mock posts data - Using this directly instead of loading from JSON file
     const posts = [
       {
         id: 1,
+        title: "MaltLabs is Now Backed by AWS: A New Chapter Begins",
+        slug: "maltlabs-is-now-backed-by-aws",
+        excerpt: "We’re proud to share some amazing news — MaltLabs is now officially part of the AWS Activate program!",
+        publishedAt: "2025-04-12T10:00:00Z",
+        author: "Jésus Lopes",
+        tags: ["AI", "AWS", "Automation"],
+        coverImage: "assets/blog/aws-startup.jpg"
+      },
+      {
+        id: 2,
         title: "How AI is Transforming Digital Marketing",
         slug: "how-ai-transforming-digital-marketing",
         excerpt: "Discover how artificial intelligence is revolutionizing marketing strategies for small and medium businesses.",
@@ -25,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         coverImage: "assets/blog/ai-marketing.jpg"
       },
       {
-        id: 2,
+        id: 3,
         title: "Complete Guide to Chatbots for Customer Service",
         slug: "complete-guide-chatbots-customer-service",
         excerpt: "Everything you need to know to implement intelligent chatbots and improve your company's customer service.",
@@ -35,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         coverImage: "assets/blog/chatbots.jpg"
       },
       {
-        id: 3,
+        id: 4,
         title: "Marketing Automation: Where to Start",
         slug: "marketing-automation-where-to-start",
         excerpt: "A step-by-step guide to implementing marketing automation in your business, even with limited resources.",
